@@ -453,6 +453,7 @@ text-align: left;
 .players__title-conteiner {
     margin: 0;
     padding: 0;
+    margin-bottom: 60px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -487,6 +488,7 @@ text-transform: uppercase;
 .players__button {
     margin: 0;
     padding: 0;
+    background: none;
     border: none;
     width: 44px;
 height: 44px;
@@ -536,4 +538,101 @@ text-align: left;
 }
 .players__counter_type_active {
     opacity: 1;
+}
+
+.players__list-wrapper {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+.players__list {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.players__item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 140px;
+    width: 394px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.players__image {
+    margin: 0;
+    padding: 0;
+    margin-left: 37px;
+    margin-right: 37px;
+    margin-bottom: 28px;
+    width: 320px;
+    height: 320px; 
+    object-fit: cover;
+    object-position: center;
+}
+
+.players__name {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 6px;
+    max-width: 320px;
+    color: rgb(49, 49, 49);
+font-family: Golos Text;
+font-size: 24px;
+font-weight: 600;
+line-height: 120%;
+letter-spacing: 0px;
+text-align: left;
+}
+
+.players__titul {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    color: rgb(49, 49, 49);
+font-family: Golos Text;
+font-size: 20px;
+font-weight: 400;
+line-height: 120%;
+letter-spacing: 0px;
+text-align: left;
+}
+
+.players__button-info {
+    margin: 0;
+    padding: 0;
+    width: 113px;
+    height: 35px;
+    border: none; 
+    box-sizing: border-box;
+    border: 1px solid rgb(48, 87, 162);
+    border-radius: 62px;
+    color: rgb(48, 87, 162);
+    font-family: Golos Text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: center;
+    transition: background 0.5s ease;
+}
+
+.players__button-info:hover {
+    cursor: pointer;
+    background: rgb(48, 87, 162);
+    color: rgb(255, 255, 255);
 }
