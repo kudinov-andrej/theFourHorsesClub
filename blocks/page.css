@@ -119,16 +119,16 @@ transition: background 0.5s ease;
 .promo {
     margin: 0;
     padding: 0;
-    width: 2335px;
+    width: 4669px;
     list-style-type: none;
     display: flex;
     padding: 18px 12px;
     background: rgb(245, 73, 50);
-    animation: animate 30s linear infinite;
+    animation: animate 60s linear infinite;
 }
 
 #carousel2 {
-    animation-delay: 30s;
+    animation-delay: 60s;
 }
 
 .promo__item {
@@ -158,7 +158,7 @@ transition: background 0.5s ease;
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-2335px); /* Используем половину ширины для корректного показа анимации при загрузке */
     }
 }
 

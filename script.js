@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+
   const list = document.querySelector('.players__list');
   const listWrapper = document.querySelector('.players__list-wrapper');
   const cardWidth = 394;
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let currentIndex = 0;
   const counter = document.querySelector('.players__counter_type_active');
   const totalCount = list.children.length - 2;
-  
+
   // Функция для обработки клика на кнопки
   function handleButtonClick(direction) {
     if (direction === 'left') {
@@ -40,6 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
     updateListPosition();
     updateCounter();
   }, 4000);
-});
+
 
 
