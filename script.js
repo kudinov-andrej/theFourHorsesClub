@@ -30,10 +30,6 @@
     counter.textContent = (currentIndex + 3).toString();
   }
 
-  // Обработчики событий для кнопок
-  document.querySelector('.players__button_type_left').addEventListener('click', () => handleButtonClick('left'));
-  document.querySelector('.players__button_type_right').addEventListener('click', () => handleButtonClick('right'));
-
    // Бесконечный скролл вправо каждые 4 секунды
    setInterval(() => {
     currentIndex = (currentIndex + 1) % totalCount;
@@ -61,4 +57,7 @@
       }
   }
 
+   // Обработчики событий для кнопок
+   document.querySelector('.players__button_type_left').addEventListener('click', () => handleButtonClick('left'));
+   document.querySelector('.players__button_type_right').addEventListener('click', () => handleButtonClick('right'));
 
