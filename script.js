@@ -99,7 +99,7 @@ document.querySelectorAll('.players__button_type_right').forEach(button => {
 
 // Для второго списка
 const listTransformation = document.querySelector('.transformation__stages_type_mobile');
-const cardWidthTransformation = 320;
+const cardWidthTransformation = 324;
 const gapTransformation = 16;
 let currentIndexTransformation = 0;
 const totalCountTransformation = listTransformation.children.length;
