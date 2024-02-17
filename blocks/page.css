@@ -459,7 +459,6 @@
     .playing__questions {
     margin-left:20px;
     margin-right:20px;
-    margin-bottom:120px;
     width:95.5%;
     font-size:18px;
   }
@@ -512,6 +511,7 @@
   }
   @media screen and (max-width:650px) {
     .transformation__title {
+  
     font-size:36px;
     margin-bottom:12px;
     margin-top:120px;
