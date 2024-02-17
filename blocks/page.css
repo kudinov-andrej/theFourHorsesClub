@@ -40,7 +40,6 @@
     margin:20px 0 40px 0;
     width:213px;
     height:32px;
-    background-image:url(../images/mobil.svg);
     background-size:cover;
     background-position:center;
   }
@@ -746,6 +745,7 @@
   }
   .transformation__button_type_disabled {
     background-image:url(../images/buttonRightDis.svg);
+    cursor: default;
   }
   .transformation__mark-conteiner {
     margin:0;
@@ -909,7 +909,7 @@
     padding:0;
     list-style-type:none;
     margin-bottom:140px;
-    width:394px;
+    width: 28,84%;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -917,7 +917,7 @@
   }
   @media screen and (max-width:650px) {
     .players__item {
-    width:95.4%;
+    width:100%;
     margin-bottom:40px;
   }
   }.players__image {

@@ -5,7 +5,7 @@ const gap = 20;
 let currentIndex = 0;
 const counters = document.querySelectorAll('.players__counter_type_active');
 let totalCount = list.children.length - 2;
-let scrollAmount = 295;
+let scrollAmount = 292;
 
 function updateScrollAmount() {
   // Проверяем ширину экрана и устанавливаем значение scrollAmount в зависимости от результата
@@ -46,7 +46,7 @@ function updateCounters() {
   });
 }
 
-setInterval(() => {
+let intervalId = setInterval(() => {
   currentIndex = (currentIndex + 1) % totalCount;
   updateListPosition();
   updateCounters();
@@ -73,17 +73,33 @@ function smoothScroll(e) {
 }
 
 document.querySelectorAll('.players__button_type_left').forEach(button => {
-  button.addEventListener('click', () => handleButtonClick('left'));
+  button.addEventListener('click', () => {
+    clearInterval(intervalId); // Очищаем текущий интервал
+    handleButtonClick('left');
+    intervalId = setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalCount;
+      updateListPosition();
+      updateCounters();
+    }, 4000); // Создаем новый интервал после клика
+  });
 });
 
 document.querySelectorAll('.players__button_type_right').forEach(button => {
-  button.addEventListener('click', () => handleButtonClick('right'));
+  button.addEventListener('click', () => {
+    clearInterval(intervalId); // Очищаем текущий интервал
+    handleButtonClick('right');
+    intervalId = setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalCount;
+      updateListPosition();
+      updateCounters();
+    }, 4000); // Создаем новый интервал после клика
+  });
 });
 
 
 // Для второго списка
 const listTransformation = document.querySelector('.transformation__stages_type_mobile');
-const cardWidthTransformation = 320;
+const cardWidthTransformation = 300;
 const gapTransformation = 16;
 let currentIndexTransformation = 0;
 const totalCountTransformation = listTransformation.children.length;
@@ -113,6 +129,16 @@ function updateCounterTransformation() {
 
   marksTransformation.forEach(mark => mark.classList.remove('transformation__mark-active'));
   marksTransformation[activeMarkIndex].classList.add('transformation__mark-active');
+
+  // Добавление класса и отключение кнопки
+  const leftButton = document.querySelector('.transformation__button_type_left');
+  if (currentIndexTransformation === 0) {
+    leftButton.classList.add('transformation__button_type_disabled');
+    leftButton.disabled = true;
+  } else {
+    leftButton.classList.remove('transformation__button_type_disabled');
+    leftButton.disabled = false;
+  }
 }
 
 function scrollListTransformation(amount) {

@@ -12,5 +12,5 @@
 
 **Ссылка**
 
-* Ссылка на сайт: 
+* Ссылка на сайт: https://kudinov-andrej.github.io/theFourHorsesClub/
 
