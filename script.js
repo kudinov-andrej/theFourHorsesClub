@@ -5,7 +5,7 @@ const gap = 20;
 let currentIndex = 0;
 const counters = document.querySelectorAll('.players__counter_type_active');
 let totalCount = list.children.length - 2;
-let scrollAmount = 292;
+let scrollAmount = 300;
 
 function updateScrollAmount() {
   // Проверяем ширину экрана и устанавливаем значение scrollAmount в зависимости от результата
